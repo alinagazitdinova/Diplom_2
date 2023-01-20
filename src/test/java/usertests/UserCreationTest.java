@@ -1,5 +1,6 @@
 package usertests;
 
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -25,6 +26,7 @@ public class UserCreationTest {
     }
 
     @Test
+    @DisplayName("Создание уникального пользоватлея")
     public void uniqueUserCreatedSuccessfully() {
         var user = generator.random();
         String accessToken =
@@ -42,6 +44,7 @@ public class UserCreationTest {
     }
 
     @Test
+    @DisplayName("Создание пользователя без имени")
     public void creationFailsWithoutName() {
         var user = generator.random();
         user.setName(null);
@@ -60,6 +63,7 @@ public class UserCreationTest {
     }
 
     @Test
+    @DisplayName("Создание пользователя без почты")
     public void creationFailsWithoutEmail() {
         var user = generator.random();
         user.setEmail(null);
@@ -78,6 +82,7 @@ public class UserCreationTest {
     }
 
     @Test
+    @DisplayName("Создание пользователя без пароля")
     public void creationFailsWithoutPassword() {
         var user = generator.random();
         user.setPassword(null);
@@ -96,6 +101,7 @@ public class UserCreationTest {
     }
 
     @Test
+    @DisplayName("Создание уже существующего пользователя")
     public void existingUserCreationFails() {
         var user = generator.random();
         String accessToken =

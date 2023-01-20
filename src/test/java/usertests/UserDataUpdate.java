@@ -1,5 +1,6 @@
 package usertests;
 
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -30,6 +31,7 @@ public class UserDataUpdate {
     }
 
     @Test
+    @DisplayName("Обновление данных пользователя")
     public void userDataUpdatedSuccessfully() {
         var user = generator.random();
         Credentials creds = Credentials.from(user);
@@ -55,6 +57,7 @@ public class UserDataUpdate {
     }
 
     @Test
+    @DisplayName("Обновление данных пользователя без авторизации")
     public void userDataUpdateFailedWithoutAuthorization() {
         var user = generator.random();
         String accessToken = //создали пользователя

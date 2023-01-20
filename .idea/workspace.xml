@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fbec90a-5522-47f6-9cb6-457d9ce66149" name="Changes" comment="Создание проекта">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Credentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/ExistingCredentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/UserNewData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/UserGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/UserNewDataGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/orderTests/NumberOfOrders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/orderTests/OrderCreationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/usertests/UserCreationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/usertests/UserDataUpdate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/usertests/UserLoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/orderTests/NumberOfOrdersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/orderTests/NumberOfOrdersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/orderTests/OrderCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/orderTests/OrderCreationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/usertests/UserCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/usertests/UserCreationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/usertests/UserDataUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/usertests/UserDataUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/usertests/UserLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/usertests/UserLoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,17 +74,64 @@
       <recent name="model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserLoginTest">
-    <configuration name="UserCreationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserDataUpdate">
+    <configuration name="NumberOfOrdersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="usertests.*" />
+          <option name="PATTERN" value="orderTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="usertests" />
-      <option name="MAIN_CLASS_NAME" value="usertests.UserCreationTest" />
+      <option name="PACKAGE_NAME" value="orderTests" />
+      <option name="MAIN_CLASS_NAME" value="orderTests.NumberOfOrdersTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumberOfOrdersTest.numberOfOrdersNotReceivedWithoutAuthorization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="orderTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="orderTests" />
+      <option name="MAIN_CLASS_NAME" value="orderTests.NumberOfOrdersTest" />
+      <option name="METHOD_NAME" value="numberOfOrdersNotReceivedWithoutAuthorization" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumberOfOrdersTest.numberOfOrdersReceivedSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="orderTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="orderTests" />
+      <option name="MAIN_CLASS_NAME" value="orderTests.NumberOfOrdersTest" />
+      <option name="METHOD_NAME" value="numberOfOrdersReceivedSuccessfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderCreationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="orderTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="orderTests" />
+      <option name="MAIN_CLASS_NAME" value="orderTests.OrderCreationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -114,60 +152,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDataUpdate.userDataUpdateFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="usertests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="usertests" />
-      <option name="MAIN_CLASS_NAME" value="usertests.UserDataUpdate" />
-      <option name="METHOD_NAME" value="userDataUpdateFailed" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDataUpdate.userDataUpdatedSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="usertests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="usertests" />
-      <option name="MAIN_CLASS_NAME" value="usertests.UserDataUpdate" />
-      <option name="METHOD_NAME" value="userDataUpdatedSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="usertests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="usertests" />
-      <option name="MAIN_CLASS_NAME" value="usertests.UserLoginTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserLoginTest" />
         <item itemvalue="JUnit.UserDataUpdate" />
-        <item itemvalue="JUnit.UserDataUpdate.userDataUpdatedSuccessfully" />
-        <item itemvalue="JUnit.UserDataUpdate.userDataUpdateFailed" />
-        <item itemvalue="JUnit.UserCreationTest" />
+        <item itemvalue="JUnit.OrderCreationTest" />
+        <item itemvalue="JUnit.NumberOfOrdersTest" />
+        <item itemvalue="JUnit.NumberOfOrdersTest.numberOfOrdersNotReceivedWithoutAuthorization" />
+        <item itemvalue="JUnit.NumberOfOrdersTest.numberOfOrdersReceivedSuccessfully" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +178,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673801300755</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Создание проекта, создание вспомогательных классов.">
+      <created>1674163296177</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674163296177</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Создание проекта, создание тестовых классов.">
+      <created>1674163461740</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674163461740</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Создание проекта">
+      <created>1674163474839</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674163474839</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,6 +231,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Создание проекта, создание вспомогательных классов." />
+    <MESSAGE value="Создание проекта, создание тестовых классов." />
     <MESSAGE value="Создание проекта" />
     <option name="LAST_COMMIT_MESSAGE" value="Создание проекта" />
   </component>

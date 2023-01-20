@@ -1,5 +1,6 @@
 package usertests;
 
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
@@ -24,6 +25,7 @@ public class UserLoginTest {
     }
 
     @Test
+    @DisplayName("Авторизация пользователя")
     public void userLoggedInSuccessfully() {
         var user = generator.random();
         ValidatableResponse response =
@@ -47,6 +49,7 @@ public class UserLoginTest {
     }
 
     @Test
+    @DisplayName("Авторизация пользователя с несуществующей почтой")
     public void userWithFakeEmailLoggedInFailed() {
         var user = generator.random();
         ValidatableResponse response =
