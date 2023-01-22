@@ -4,13 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fbec90a-5522-47f6-9cb6-457d9ce66149" name="Changes" comment="Создание проекта">
+    <list default="true" id="4fbec90a-5522-47f6-9cb6-457d9ce66149" name="Changes" comment="Добавление аннотации @DisplayName">
+      <change afterPath="$PROJECT_DIR$/target/allure-results/0e06dbd6-4d9d-4a4d-b6d4-1f04c8f9b84b-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/1d5b8b69-0b87-4a51-92df-50f0db271c86-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/2a1fdb9f-704c-425c-81ab-94c2dfec9b6f-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/33768cd9-d28b-408d-95c9-331bc73b3ba2-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/36870ed1-5fb7-41c0-a7d6-0c39c2779ab8-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/417c20cf-1b20-474f-992b-74003c1e3eac-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/53a32e97-ddee-4565-b624-d36660398b26-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/53aceb7f-9ece-4117-b3df-253c52176e6b-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/5741f9dd-093d-4f31-8866-34d2db4f63b1-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/8a87c8b5-f54b-45e3-9ce8-d7b976eb57ac-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/9ea1ad4a-73c9-4087-902c-339e7d7186eb-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/c0f0faa0-7010-41b1-ae67-00dc0a6d4321-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/d4d6b792-2a11-42b8-9194-fcce00ce41b1-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/allure-results/d753d215-2407-48f0-ac03-c78640e075aa-result.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/orderTests/NumberOfOrdersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/orderTests/NumberOfOrdersTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/orderTests/OrderCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/orderTests/OrderCreationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/usertests/UserCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/usertests/UserCreationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/usertests/UserDataUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/usertests/UserDataUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/usertests/UserLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/usertests/UserLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/usertests/UserCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userTests/UserCreationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/usertests/UserDataUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userTests/UserDataUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/usertests/UserLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userTests/UserLoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +87,13 @@
       <recent name="model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserDataUpdate">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean test" />
+      <command value="mvn allure:serve" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.NumberOfOrdersTest">
     <configuration name="NumberOfOrdersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom2" />
       <extension name="coverage">
@@ -141,12 +160,12 @@
       <module name="Diplom2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="usertests.*" />
+          <option name="PATTERN" value="userTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="usertests" />
-      <option name="MAIN_CLASS_NAME" value="usertests.UserDataUpdate" />
+      <option name="MAIN_CLASS_NAME" value="userTests.UserDataUpdate" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,9 +173,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserDataUpdate" />
-        <item itemvalue="JUnit.OrderCreationTest" />
         <item itemvalue="JUnit.NumberOfOrdersTest" />
+        <item itemvalue="JUnit.OrderCreationTest" />
+        <item itemvalue="JUnit.UserDataUpdate" />
         <item itemvalue="JUnit.NumberOfOrdersTest.numberOfOrdersNotReceivedWithoutAuthorization" />
         <item itemvalue="JUnit.NumberOfOrdersTest.numberOfOrdersReceivedSuccessfully" />
       </list>
@@ -199,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674163474839</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавление аннотации @DisplayName">
+      <created>1674234436684</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674234436684</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,6 +260,7 @@
     <MESSAGE value="Создание проекта, создание вспомогательных классов." />
     <MESSAGE value="Создание проекта, создание тестовых классов." />
     <MESSAGE value="Создание проекта" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание проекта" />
+    <MESSAGE value="Добавление аннотации @DisplayName" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление аннотации @DisplayName" />
   </component>
 </project>
