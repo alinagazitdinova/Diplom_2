@@ -4,7 +4,6 @@ public class UserNewData {
     private String email;
     private String name;
 
-
     public UserNewData(String email, String name) {
         this.email = email;
         this.name = name;

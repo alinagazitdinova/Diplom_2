@@ -1,10 +1,13 @@
 package userTests;
 
+import client.UserClient;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
 import model.User;
+import model.Assertions;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,10 +18,10 @@ import static org.hamcrest.Matchers.is;
 
 public class UserCreationTest {
     protected final UserGenerator generator = new UserGenerator();
-    private final String registerApi = "/api/auth/register";
     private String accessToken;
     private User user;
-
+    private final UserClient client = new UserClient();
+    private final Assertions check = new Assertions();
 
     @Before
     public void setUp() {
@@ -29,18 +32,8 @@ public class UserCreationTest {
     @DisplayName("Создание уникального пользоватлея")
     public void uniqueUserCreatedSuccessfully() {
         var user = generator.random();
-        String accessToken =
-                given().log().all()
-                        .contentType(ContentType.JSON)
-                        .and()
-                        .body(user)
-                        .when()
-                        .post(registerApi)
-                        .then().assertThat()
-                        .body("success", is(true))
-                        .and().statusCode(200)
-                        .extract().path("accessToken");
-        ;
+        ValidatableResponse creationResponse = client.create(user);
+        accessToken = check.successIsTrue200(creationResponse);
     }
 
     @Test
@@ -48,18 +41,8 @@ public class UserCreationTest {
     public void creationFailsWithoutName() {
         var user = generator.random();
         user.setName(null);
-        String accessToken =
-                given().log().all()
-                        .contentType(ContentType.JSON)
-                        .and()
-                        .body(user)
-                        .when()
-                        .post(registerApi)
-                        .then().assertThat()
-                        .body("success", is(false))
-                        .and().statusCode(403)
-                        .extract().path("accessToken");
-        ;
+        ValidatableResponse creationResponse = client.create(user);
+        accessToken = check.successIsFalse403(creationResponse);
     }
 
     @Test
@@ -67,18 +50,8 @@ public class UserCreationTest {
     public void creationFailsWithoutEmail() {
         var user = generator.random();
         user.setEmail(null);
-        String accessToken =
-                given().log().all()
-                        .contentType(ContentType.JSON)
-                        .and()
-                        .body(user)
-                        .when()
-                        .post(registerApi)
-                        .then().assertThat()
-                        .body("success", is(false))
-                        .and().statusCode(403)
-                        .extract().path("accessToken");
-        ;
+        ValidatableResponse creationResponse = client.create(user);
+        accessToken = check.successIsFalse403(creationResponse);
     }
 
     @Test
@@ -86,45 +59,17 @@ public class UserCreationTest {
     public void creationFailsWithoutPassword() {
         var user = generator.random();
         user.setPassword(null);
-        String accessToken =
-                given().log().all()
-                        .contentType(ContentType.JSON)
-                        .and()
-                        .body(user)
-                        .when()
-                        .post(registerApi)
-                        .then().assertThat()
-                        .body("success", is(false))
-                        .and().statusCode(403)
-                        .extract().path("accessToken");
-        ;
+        ValidatableResponse creationResponse = client.create(user);
+        accessToken = check.successIsFalse403(creationResponse);
     }
 
     @Test
     @DisplayName("Создание уже существующего пользователя")
     public void existingUserCreationFails() {
         var user = generator.random();
-        String accessToken =
-                given().log().all()
-                        .contentType(ContentType.JSON)
-                        .and()
-                        .body(user)
-                        .when()
-                        .post(registerApi)
-                        .then().assertThat()
-                        .body("success", is(true))
-                        .and().statusCode(200)
-                        .extract().path("accessToken");
-        ;
-        given().log().all()
-                .contentType(ContentType.JSON)
-                .and()
-                .body(user)
-                .when()
-                .post(registerApi)
-                .then().assertThat()
-                .body("success", is(false))
-                .and().statusCode(403);
+        ValidatableResponse creationResponse = client.create(user);
+        ValidatableResponse creationResponse1 = client.create(user);
+        accessToken = check.successIsFalse403(creationResponse1);
     }
 
     @After

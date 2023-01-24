@@ -36,6 +36,7 @@ public class User {
     }
 
     // конструктор без параметров
-    public User() {  }
+    public User() {
+    }
 
 }

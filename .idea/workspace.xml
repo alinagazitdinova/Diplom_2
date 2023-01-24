@@ -4,26 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fbec90a-5522-47f6-9cb6-457d9ce66149" name="Changes" comment="Добавление аннотации @DisplayName">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2023_20_11_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2023_20_11__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2023_20_12_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2023_20_12__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/0e06dbd6-4d9d-4a4d-b6d4-1f04c8f9b84b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/1d5b8b69-0b87-4a51-92df-50f0db271c86-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/2a1fdb9f-704c-425c-81ab-94c2dfec9b6f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/33768cd9-d28b-408d-95c9-331bc73b3ba2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/36870ed1-5fb7-41c0-a7d6-0c39c2779ab8-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/417c20cf-1b20-474f-992b-74003c1e3eac-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/53a32e97-ddee-4565-b624-d36660398b26-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/53aceb7f-9ece-4117-b3df-253c52176e6b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/5741f9dd-093d-4f31-8866-34d2db4f63b1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/8a87c8b5-f54b-45e3-9ce8-d7b976eb57ac-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/9ea1ad4a-73c9-4087-902c-339e7d7186eb-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/c0f0faa0-7010-41b1-ae67-00dc0a6d4321-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/d4d6b792-2a11-42b8-9194-fcce00ce41b1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/d753d215-2407-48f0-ac03-c78640e075aa-result.json" beforeDir="false" />
+    <list default="true" id="4fbec90a-5522-47f6-9cb6-457d9ce66149" name="Changes" comment="Убрала дубликаты в pom">
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/OrderClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/UserClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Assertions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/UserNewData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UserNewData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/UserGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/UserGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/UserNewDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/UserNewDataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/orderTests/NumberOfOrdersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/orderTests/NumberOfOrdersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/orderTests/OrderCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/orderTests/OrderCreationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/userTests/UserCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userTests/UserCreationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/userTests/UserDataUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userTests/UserDataUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/userTests/UserLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userTests/UserLoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,58 +85,11 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn clean test" />
       <command value="mvn allure:serve" />
+      <command value="mvn clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.NumberOfOrdersTest">
-    <configuration name="NumberOfOrdersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="orderTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="orderTests" />
-      <option name="MAIN_CLASS_NAME" value="orderTests.NumberOfOrdersTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NumberOfOrdersTest.numberOfOrdersNotReceivedWithoutAuthorization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="orderTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="orderTests" />
-      <option name="MAIN_CLASS_NAME" value="orderTests.NumberOfOrdersTest" />
-      <option name="METHOD_NAME" value="numberOfOrdersNotReceivedWithoutAuthorization" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NumberOfOrdersTest.numberOfOrdersReceivedSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="orderTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="orderTests" />
-      <option name="MAIN_CLASS_NAME" value="orderTests.NumberOfOrdersTest" />
-      <option name="METHOD_NAME" value="numberOfOrdersReceivedSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UserLoginTest">
     <configuration name="OrderCreationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom2" />
       <extension name="coverage">
@@ -156,6 +105,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserCreationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="userTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="userTests" />
+      <option name="MAIN_CLASS_NAME" value="userTests.UserCreationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserDataUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom2" />
       <extension name="coverage">
@@ -164,8 +128,39 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="usertests" />
+      <option name="PACKAGE_NAME" value="userTests" />
       <option name="MAIN_CLASS_NAME" value="userTests.UserDataUpdate" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDataUpdate.userDataUpdatedSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="userTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="userTests" />
+      <option name="MAIN_CLASS_NAME" value="userTests.UserDataUpdate" />
+      <option name="METHOD_NAME" value="userDataUpdatedSuccessfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="userTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="userTests" />
+      <option name="MAIN_CLASS_NAME" value="userTests.UserLoginTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -173,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.NumberOfOrdersTest" />
-        <item itemvalue="JUnit.OrderCreationTest" />
+        <item itemvalue="JUnit.UserLoginTest" />
         <item itemvalue="JUnit.UserDataUpdate" />
-        <item itemvalue="JUnit.NumberOfOrdersTest.numberOfOrdersNotReceivedWithoutAuthorization" />
-        <item itemvalue="JUnit.NumberOfOrdersTest.numberOfOrdersReceivedSuccessfully" />
+        <item itemvalue="JUnit.UserDataUpdate.userDataUpdatedSuccessfully" />
+        <item itemvalue="JUnit.UserCreationTest" />
+        <item itemvalue="JUnit.OrderCreationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +220,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674234436684</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Убрала дубликаты в pom">
+      <created>1674495969663</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674495969663</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Убрала дубликаты в pom">
+      <created>1674496079300</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674496079300</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,6 +270,7 @@
     <MESSAGE value="Создание проекта, создание тестовых классов." />
     <MESSAGE value="Создание проекта" />
     <MESSAGE value="Добавление аннотации @DisplayName" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление аннотации @DisplayName" />
+    <MESSAGE value="Убрала дубликаты в pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="Убрала дубликаты в pom" />
   </component>
 </project>

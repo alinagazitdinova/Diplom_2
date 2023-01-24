@@ -1,24 +1,25 @@
 package orderTests;
 
+import client.UserClient;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import model.Credentials;
+import io.restassured.response.ValidatableResponse;
 import model.User;
+import model.Assertions;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import utils.UserGenerator;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.is;
 
 public class NumberOfOrdersTest {
-
     protected final UserGenerator generator = new UserGenerator();
-    private final String ROOT1 = "/api/auth/register"; //ручка
-    private final String ROOT2 = "/api/auth/user"; //ручка
+    private final String apiOrders = "/api/orders"; //ручка
     private User user;
+    private final UserClient client = new UserClient();
+    private final Assertions check = new Assertions();
     private String accessToken;
 
     @Before
@@ -30,44 +31,23 @@ public class NumberOfOrdersTest {
     @DisplayName("Проверка получения заказа сгенерированного пользователя")
     public void numberOfOrdersReceivedSuccessfully() {
         var user = generator.random();
-        Credentials creds = Credentials.from(user);
-        String accessToken = given().log().all()
-                .contentType(ContentType.JSON)
-                .and()
-                .body(creds)
-                .when()
-                .post(ROOT1)
-                .then().statusCode(200)
-                .extract().path("accessToken");
-        given()
+        String accessToken = client.createWithToken(user);
+        ValidatableResponse response = given()
                 .auth().oauth2(accessToken.replace("Bearer ", ""))
-                .get("/api/orders")
-                .then().assertThat()
-                .body("success", is(true))
-                .and().statusCode(200);
+                .get(apiOrders).then();
+        check.successIsTrue200(response);
     }
-
     @Test
     @DisplayName("Проверка получения заказа сгенерированного пользователя без авторизации")
     public void numberOfOrdersNotReceivedWithoutAuthorization() {
         var user = generator.random();
-        Credentials creds = Credentials.from(user);
-        String accessToken = given().log().all()
-                .contentType(ContentType.JSON)
-                .and()
-                .body(creds)
-                .when()
-                .post(ROOT1)
-                .then().statusCode(200)
-                .extract().path("accessToken");
-        given()
+        String accessToken = client.createWithToken(user);
+        ValidatableResponse response = given()
                 .auth().oauth2(" ")
-                .get("/api/orders")
-                .then().assertThat()
-                .body("success", is(false))
-                .and().statusCode(401);;
+                .get("/api/orders").then();
+        check.successIsFalse401(response)
+        ;
     }
-
     @After
     public void deleteUser() {
         if (accessToken != null) {

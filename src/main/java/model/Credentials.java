@@ -10,7 +10,8 @@ public class Credentials {
         this.password = password;
         this.name = name;
     }
-    public static Credentials from (User user) {
+
+    public static Credentials from(User user) {
         return new Credentials(user.getEmail(), user.getPassword(), user.getName());
     }
 
@@ -39,6 +40,7 @@ public class Credentials {
     }
 
     // конструктор без параметров
-    public Credentials() {  }
+    public Credentials() {
+    }
 
 }
