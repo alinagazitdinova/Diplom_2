@@ -3,23 +3,23 @@ package userTests;
 import client.UserClient;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
-import model.Credentials;
-import model.User;
 import model.Assertions;
+import model.Credentials;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import utils.UserGenerator;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.is;
 
 public class UserLoginTest {
     protected final UserGenerator generator = new UserGenerator();
 
-    private User user;
     private final UserClient client = new UserClient();
     private final Assertions check = new Assertions();
+    private String accessToken;
 
     @Before
     public void setUp() {
@@ -32,8 +32,8 @@ public class UserLoginTest {
         var user = generator.random();
         client.create(user);
         Credentials creds = Credentials.from(user);
-        ValidatableResponse response =  client.loginWithCreds(creds); //given().log().all()
-        check.successIsTrue200(response);
+        ValidatableResponse response = client.loginWithCreds(creds);
+        accessToken = check.successIsTrue200(response);
     }
 
     @Test
@@ -44,7 +44,16 @@ public class UserLoginTest {
         user.setEmail("sosiska@gmail.com");
         user.setPassword("1234");
         ValidatableResponse response = client.login(user);
-        check.successIsFalse401(response);
+        accessToken = check.successIsFalse401(response);
     }
 
+    @After
+    public void deleteUser() {
+        if (accessToken != null) {
+            given().header("Authorization", accessToken)
+                    .contentType(ContentType.JSON)
+                    .and()
+                    .delete("https://stellarburgers.nomoreparties.site/api/auth/user");
+        }
+    }
 }

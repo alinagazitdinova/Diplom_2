@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fbec90a-5522-47f6-9cb6-457d9ce66149" name="Changes" comment="Убрала дубликаты в pom">
-      <change afterPath="$PROJECT_DIR$/src/main/java/client/OrderClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/client/UserClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Assertions.java" afterDir="false" />
+    <list default="true" id="4fbec90a-5522-47f6-9cb6-457d9ce66149" name="Changes" comment="Обернула блоки в вспомогательные классы.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/OrderClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/OrderClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Assertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Assertions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ExistingCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ExistingCredentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/UserNewData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UserNewData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/UserGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/UserGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/UserNewDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/UserNewDataGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/orderTests/NumberOfOrdersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/orderTests/NumberOfOrdersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/orderTests/OrderCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/orderTests/OrderCreationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/userTests/UserCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/userTests/UserCreationTest.java" afterDir="false" />
@@ -90,6 +90,21 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.UserLoginTest">
+    <configuration name="NumberOfOrdersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="orderTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="orderTests" />
+      <option name="MAIN_CLASS_NAME" value="orderTests.NumberOfOrdersTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderCreationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom2" />
       <extension name="coverage">
@@ -135,22 +150,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDataUpdate.userDataUpdatedSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="userTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="userTests" />
-      <option name="MAIN_CLASS_NAME" value="userTests.UserDataUpdate" />
-      <option name="METHOD_NAME" value="userDataUpdatedSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom2" />
       <extension name="coverage">
@@ -170,9 +169,9 @@
       <list>
         <item itemvalue="JUnit.UserLoginTest" />
         <item itemvalue="JUnit.UserDataUpdate" />
-        <item itemvalue="JUnit.UserDataUpdate.userDataUpdatedSuccessfully" />
         <item itemvalue="JUnit.UserCreationTest" />
         <item itemvalue="JUnit.OrderCreationTest" />
+        <item itemvalue="JUnit.NumberOfOrdersTest" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674496079300</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Обернула блоки в вспомогательные классы.">
+      <created>1674569737766</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674569737766</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -271,6 +277,7 @@
     <MESSAGE value="Создание проекта" />
     <MESSAGE value="Добавление аннотации @DisplayName" />
     <MESSAGE value="Убрала дубликаты в pom" />
-    <option name="LAST_COMMIT_MESSAGE" value="Убрала дубликаты в pom" />
+    <MESSAGE value="Обернула блоки в вспомогательные классы." />
+    <option name="LAST_COMMIT_MESSAGE" value="Обернула блоки в вспомогательные классы." />
   </component>
 </project>

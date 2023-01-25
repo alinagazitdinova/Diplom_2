@@ -32,4 +32,10 @@ public class Assertions {
                 .and().statusCode(400)
                 .extract().path("accessToken");
     }
+
+    public ValidatableResponse status500(ValidatableResponse response) {
+        return response.assertThat()
+                .statusCode(500)
+                ;
+    }
 }

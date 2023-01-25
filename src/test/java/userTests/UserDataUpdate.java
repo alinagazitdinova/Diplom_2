@@ -4,11 +4,8 @@ import client.UserClient;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
-import model.User;
 import model.Assertions;
-import model.UserNewData;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,8 +19,6 @@ public class UserDataUpdate {
     protected final UserNewDataGenerator generatorMail = new UserNewDataGenerator();
     private final UserClient client = new UserClient();
     private final Assertions check = new Assertions();
-    private User user;
-    private UserNewData userNewData;
     private String accessToken;
 
     @Before
@@ -35,7 +30,7 @@ public class UserDataUpdate {
     @DisplayName("Обновление данных пользователя")
     public void userDataUpdatedSuccessfully() {
         var user = generator.random();
-        String accessToken = client.createWithToken(user);
+        accessToken = client.createWithToken(user);
         var userNewData = generatorMail.random();
         ValidatableResponse response = given().log().all()
                 .header("Authorization", accessToken)
@@ -60,13 +55,13 @@ public class UserDataUpdate {
     @After
     public void deleteUser() {
         if (accessToken != null) {
-            Response response =
-                    given().header("Authorization", accessToken)
-                            .contentType(ContentType.JSON)
-                            .and()
-                            .delete("https://stellarburgers.nomoreparties.site/api/auth/user");
+            given().header("Authorization", accessToken)
+                    .contentType(ContentType.JSON)
+                    .and()
+                    .delete("https://stellarburgers.nomoreparties.site/api/auth/user");
         }
     }
+
 }
 
 

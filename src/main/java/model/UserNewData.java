@@ -9,6 +9,10 @@ public class UserNewData {
         this.name = name;
     }
 
+    // конструктор без параметров
+    public UserNewData() {
+    }
+
     public String getEmail() {
         return email;
     }
@@ -23,9 +27,5 @@ public class UserNewData {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    // конструктор без параметров
-    public UserNewData() {
     }
 }

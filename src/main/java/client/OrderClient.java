@@ -15,6 +15,16 @@ public class OrderClient {
                 .when()
                 .post("/api/orders").then();
     }
+
+    public ValidatableResponse createWrongIngreds(Order order) {
+        return given().log().all()
+                .contentType(ContentType.JSON)
+                .and()
+                .body("{\"ingredients\": \"rkjdvfhlrkjvhfbkb\"}")
+                .when()
+                .post("/api/orders")
+                .then();
+    }
 }
 
 

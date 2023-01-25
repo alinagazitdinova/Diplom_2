@@ -12,7 +12,8 @@ public class UserClient {
     private final String apiRegister = "/api/auth/register";
     private final String apiUser = "/api/auth/user";
     private final String apiLogin = "/api/auth/login";
-    private UserNewData userNewData;
+    private String accessToken;
+
 
     public ValidatableResponse create(User user) {
         return given().log().all()
@@ -74,4 +75,6 @@ public class UserClient {
                 .then().statusCode(200)
                 .extract().path("accessToken");
     }
+
+
 }

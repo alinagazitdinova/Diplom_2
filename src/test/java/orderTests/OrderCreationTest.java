@@ -5,11 +5,9 @@ import client.UserClient;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
-import model.Credentials;
-import model.Order;
 import model.Assertions;
+import model.Order;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,18 +17,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.is;
 
 public class OrderCreationTest {
 
-    protected final Order order = new Order();
     protected final UserGenerator generator = new UserGenerator();
-    private final String apiOrders = "/api/orders";
-    List<String> ingredients = new ArrayList<>(); //массив с ингридиентами
-    private String accessToken;
     private final UserClient client = new UserClient();
     private final OrderClient orderClient = new OrderClient();
     private final Assertions check = new Assertions();
+    List<String> ingredients = new ArrayList<>(); //массив с ингридиентами
+    private String accessToken;
 
     @Before
     public void setUp() {
@@ -41,7 +36,7 @@ public class OrderCreationTest {
 
     @Test
     @DisplayName("Создание заказа с ингридиентами")
-    public void orderCreatedSuccessfullyWithIngredients() { //создаем заказ c ингридиентами
+    public void orderCreatedSuccessfullyWithIngredients() {
         Order order = new Order(ingredients);
         ValidatableResponse response = orderClient.createOrder(order);
         check.successIsTrue200(response);
@@ -49,7 +44,7 @@ public class OrderCreationTest {
 
     @Test
     @DisplayName("Создание заказов без ингридиентов")
-    public void orderCreationFailedWithoutIngredients() { //создаем заказ без ингридиентов
+    public void orderCreationFailedWithoutIngredients() {
         Order order = new Order(ingredients);
         order.setIngredients(null);
         ValidatableResponse response = orderClient.createOrder(order);
@@ -68,7 +63,7 @@ public class OrderCreationTest {
                 .and()
                 .body(order)
                 .when()
-                .post(apiOrders).then();
+                .post("/api/orders").then();
         check.successIsTrue200(response);
     }
 
@@ -78,40 +73,25 @@ public class OrderCreationTest {
         var user = generator.random();
         Order order = new Order(ingredients);
         accessToken = client.createWithToken(user);
-        given().log().all()
-               // .header("Authorization", "")
-                .contentType(ContentType.JSON)
-                .and()
-                .body(order)
-                .when()
-                .post(apiOrders)
-                .then().assertThat()
-                .body("success", is(true))
-                .and().statusCode(200);
+        ValidatableResponse validatableResponse = orderClient.createOrder(order);
+        check.successIsTrue200(validatableResponse);
     }
 
     @Test
     @DisplayName("Создание заказа с несуществующими ингридиентами")
     public void orderNotCreatedWithWrongIngredients() {
-
-        ValidatableResponse response =
-                given().log().all()
-                        .contentType(ContentType.JSON)
-                        .and()
-                        .body("{\"ingredients\": \"rkjdvfhlrkjvhfbkb\"}")
-                        .when()
-                        .post(apiOrders)
-                        .then().assertThat()
-                        .statusCode(500);
+        Order order = new Order(ingredients);
+        ValidatableResponse response = orderClient.createWrongIngreds(order);
+        check.status500(response);
     }
+
     @After
     public void deleteUser() {
         if (accessToken != null) {
-            Response response =
-                    given().header("Authorization", accessToken)
-                            .contentType(ContentType.JSON)
-                            .and()
-                            .delete("https://stellarburgers.nomoreparties.site/api/auth/user");
+            given().header("Authorization", accessToken)
+                    .contentType(ContentType.JSON)
+                    .and()
+                    .delete("https://stellarburgers.nomoreparties.site/api/auth/user");
         }
     }
 }

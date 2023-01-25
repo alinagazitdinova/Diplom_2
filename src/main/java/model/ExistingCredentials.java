@@ -10,7 +10,12 @@ public class ExistingCredentials {
         this.password = password;
         this.name = name;
     }
-    public static ExistingCredentials from (User user) {
+
+    // конструктор без параметров
+    public ExistingCredentials() {
+    }
+
+    public static ExistingCredentials from(User user) {
         return new ExistingCredentials(user.getEmail(), user.getName(), user.getPassword());
     }
 
@@ -18,27 +23,24 @@ public class ExistingCredentials {
         return email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public String getName() {
-        return name;
-    }
-
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
-
-    // конструктор без параметров
-    public ExistingCredentials() {  }
 
 }
